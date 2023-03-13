@@ -13,13 +13,17 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 // import AdbIcon from '@mui/icons-material/Adb';
+import { useAuth0 } from "@auth0/auth0-react";
+import Logo from '../assets/AIMETRIC.jpeg';
 
-const pages = ['Home', 'About'];
+// const pages = ['Home', 'About'];
 const settings = ['Profile', 'Dashboard'];
+
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -59,7 +63,7 @@ function ResponsiveAppBar() {
             AIMETRIC
           </Typography> */}
 
-          <Box sx={{ flexGrow: .3, display: { xs: 'flex', lg: 'flex' } }}>
+          <Box sx={{ flexGrow: .3, display: { xs: 'flex', lg: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -94,6 +98,13 @@ function ResponsiveAppBar() {
             <Button color='inherit' component={Link} to='/about' sx={{ fontSize: '15px', flexGrow: .5, display: 'flex', flexDirection: 'column' }}>
               About
             </Button>
+            {
+              isAuthenticated ? (
+                <Button variant='outlined' color='inherit' sx={{flexGrow: .1, mr: '10px'}} onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}> Log Out </Button>
+              ) : (
+                <Button variant='outlined' color='inherit' sx={{flexGrow: .2, mr: '10px'}} onClick={() => loginWithRedirect()}>Log In</Button>
+              )
+            }
             </Menu>
           </Box>
           {/* <AdbIcon sx={{ flexGrow: .5 ,display: { xs: 'flex', lg: 'flex' }, mr: 1 }} /> */}
@@ -114,7 +125,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            AIMETRIC
+            <img src={Logo} alt="Logo" width='160px' height='60px' style={{marginLeft: '30px' }} />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {/* {pages.map((page) => (
@@ -132,6 +143,13 @@ function ResponsiveAppBar() {
             <Button color='inherit' component={Link} to='/about' sx={{ fontSize: '18px', flexGrow: .5 }}>
               About
             </Button>
+            {
+              isAuthenticated ? (
+                <Button variant='outlined' color='inherit' sx={{flexGrow: .1, mr: '10px'}} onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}> Log Out </Button>
+              ) : (
+                <Button variant='outlined' color='inherit' sx={{flexGrow: .2, mr: '10px'}} onClick={() => loginWithRedirect()}>Log In</Button>
+              )
+            }
           </Box>
 
           <Box sx={{ flexGrow: .3 }}>
