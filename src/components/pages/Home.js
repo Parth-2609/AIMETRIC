@@ -11,11 +11,11 @@ const Home = () => {
   return (
     
     <Box>
-        <Typography ml='50px' mt='70px'> { isAuthenticated && <Typography variant='h4'> Welcome <span style={{fontWeight: 'bolder'}}> {user.name} </span> </Typography> }
+        <Typography ml='50px' mt='70px'> { isAuthenticated && <Typography class='welcome' variant='h4'> Welcome <span class='welcome1' style={{fontWeight: 'bolder'}}> {user.name} </span> </Typography> }
         </Typography>
-        <Typography variant='h1' textAlign='center' mt='100px' alignContent='center'>
+        {/* <Typography variant='h1' textAlign='center' mt='100px' alignContent='center'>
             This is the Home Page
-        </Typography>
+        </Typography> */}
     </Box>
   )
 }
