@@ -10,8 +10,9 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
+import Stack from '@mui/material/Stack'
+// import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';  
 // import AdbIcon from '@mui/icons-material/Adb';
 import { useAuth0 } from "@auth0/auth0-react";
 import Logo from '../assets/AIMETRIC.jpeg';
@@ -41,7 +42,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: 'blueviolet' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'flex', lg: 'flex' }, mr: 1 }} />
@@ -63,7 +64,7 @@ function ResponsiveAppBar() {
             AIMETRIC
           </Typography> */}
 
-          <Box sx={{ flexGrow: .3, display: { xs: 'flex', lg: 'none' } }}>
+          <Box sx={{ flexGrow: .3, display: { xs: 'flex', lg: 'none', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -92,6 +93,9 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
+              <Button color='inherit' component={Link} to='/calender' sx={{ fontSize: '15px', flexGrow: .5, display: 'flex', flexDirection: 'column' }}>
+              Calendar
+            </Button>
               <Button color='inherit' component={Link} to='/' sx={{ fontSize: '15px', flexGrow: .5, display: 'flex', flexDirection: 'column' }}>
               Home
             </Button>
@@ -116,7 +120,7 @@ function ResponsiveAppBar() {
             sx={{
               fontSize: '30px',
               mr: 2,
-              display: { xs: 'flex', lg: 'flex' },
+              display: { xs: 'flex', lg: 'flex', md: 'flex' },
               flexGrow: 10,
               fontFamily: '-moz-initial',
               fontWeight: 700,
@@ -125,7 +129,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            <img src={Logo} alt="Logo" width='160px' height='60px' style={{marginLeft: '30px' }} />
+            <img src={Logo} alt="Logo" width='155px' height='55px' style={{marginLeft: '30px' }} />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {/* {pages.map((page) => (
@@ -137,8 +141,11 @@ function ResponsiveAppBar() {
                 {page}
               </Button>
             ))} */}
+            <Button color='inherit' component={Link} to='/calender' sx={{ fontSize: '18px', flexGrow: .5 }}>
+              Calendar
+            </Button>
             <Button color='inherit' component={Link} to='/' sx={{ fontSize: '18px', flexGrow: .5 }}>
-              Home
+             Home
             </Button>
             <Button color='inherit' component={Link} to='/about' sx={{ fontSize: '18px', flexGrow: .5 }}>
               About
@@ -174,11 +181,15 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+            <Stack direction="column">
+            <Button component={Link} to='/profile' >Profile</Button>
+            <Button >Dashboard</Button>
+              {/* {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
+              </Stack>
             </Menu>
           </Box>
         </Toolbar>
