@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Img1 from '../assets/1.png';
 import Img2 from '../assets/2.png';
 import Img3 from '../assets/3.png';
-import Img4 from '../assets/AIMETRIC.jpeg';
+// import Img4 from '../assets/AIMETRIC.jpeg';
 
 const Card = () => {
     const [flip, setFlip] = useState(false);
@@ -26,15 +26,15 @@ const Card = () => {
                 margin: '20px',
                 borderRadius: '4px',
                 textAlign: 'center',
-                padding: '5px',
+                padding: '20px',
                 alignItems: 'center',
                 display: 'flex',
-                paddingTop: '70px',
+                // paddingTop: '70px',
                 fontFamily: 'Oswald',
                 flexDirection: 'column'
             }}>
             <img src={Img2} alt="task" width={120} />
-                Add Your Tasks
+            Add Your Tasks
                 <br />
                 <br />
                 {/* <button style={{
@@ -93,7 +93,6 @@ const Card = () => {
                 padding: '5px',
                 alignItems: 'center',
                 display: 'flex',
-                paddingTop: '70px',
                 fontFamily: 'Oswald',
                 flexDirection: 'column'
             }}>
@@ -157,7 +156,6 @@ const Card = () => {
                 padding: '5px',
                 alignItems: 'center',
                 display: 'flex',
-                paddingTop: '70px',
                 fontFamily: 'Oswald',
                 flexDirection: 'column'
             }}>
