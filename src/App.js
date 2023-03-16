@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 import { Route, Routes} from "react-router-dom";
 
 
@@ -11,6 +11,7 @@ import Calender from './components/pages/Calender';
 import Profile from './components/pages/Profile';
 import AddTask from './components/AddTask';
 import Budget from './components/Budget';
+
 
 
 

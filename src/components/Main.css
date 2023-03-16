@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins&family=Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@700&family=Poppins&family=Yeseva+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@700&family=Poppins&family=Yeseva+One&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&family=Oswald:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&family=Oswald:wght@500;700&family=Poppins&display=swap');
@@ -224,8 +224,12 @@
     height: 100vh;
     background-color: #e1dff4;
   }
-  .what{
+.what{
     font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 80px;
+    color:#4E4BDC ;
+    margin-left: 3%;
+    margin-top: 5%;
   }
   .para{
     font-family: 'Poppins', sans-serif;
@@ -235,7 +239,19 @@
   .dear{
     font-family: 'Edu NSW ACT Foundation', cursive;
     margin-left: 2%;
+    font-size: 45px;
+    margin-top: 3%;
+    color: rgb(31, 31, 31);
   }
-  /* .cal{
+
+.cal{
+    font-family: 'Oswald';
+    font-size: 18px;
+}
+.ofer{
     font-family: 'Edu NSW ACT Foundation', cursive;
-  } */
+    color:#4E4BDC ;
+    font-size: 80px;
+    margin-left: 3%;
+    margin-top: 7%;
+}

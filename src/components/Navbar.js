@@ -15,7 +15,7 @@ import Stack from '@mui/material/Stack'
 import { Link } from 'react-router-dom';  
 // import AdbIcon from '@mui/icons-material/Adb';
 import { useAuth0 } from "@auth0/auth0-react";
-import Logo from '../assets/AIMETRIC.jpeg';
+import Logo from '../assets/aimetricLogo.png';
 
 // const pages = ['Home', 'About'];
 // const settings = ['Profile', 'Dashboard'];
@@ -42,7 +42,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#7367EE', height: '66px' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#7367EE', height: '68px' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'flex', lg: 'flex' }, mr: 1 }} />
@@ -129,7 +129,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            <img src={Logo} alt="Logo" width='155px' height='55px' style={{marginLeft: '30px' }} />
+            <img src={Logo} alt="Logo" width='155px' style={{marginLeft: '30px' }} />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {/* {pages.map((page) => (
@@ -141,13 +141,13 @@ function ResponsiveAppBar() {
                 {page}
               </Button>
             ))} */}
-            <Button color='inherit' component={Link} to='/calender' sx={{ fontSize: '18px', flexGrow: .5 }}>
+            <Button color='inherit' component={Link} to='/calender' sx={{ fontSize: '18px', flexGrow: .5, fontFamily: 'Oswald'}}>
               Calendar
             </Button>
-            <Button color='inherit' component={Link} to='/' sx={{ fontSize: '18px', flexGrow: .5 }}>
+            <Button color='inherit' component={Link} to='/' sx={{ fontSize: '18px', flexGrow: .5, fontFamily: 'Oswald' }}>
              Home
             </Button>
-            <Button color='inherit' component={Link} to='/about' sx={{ fontSize: '18px', flexGrow: .5 }}>
+            <Button color='inherit' component={Link} to='/about' sx={{ fontSize: '18px', flexGrow: .5, fontFamily: 'Oswald' }}>
               About
             </Button>
             {

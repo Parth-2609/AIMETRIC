@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <Box mt={7} height={250} width="100%" sx={{ backgroundColor: 'blueviolet' }}>
+    <Box mt={7} height={250} width="100%" sx={{ backgroundColor: '#7367EE' }}>
       <Grid container justifyContent="center" spacing={2}>
 
         <Grid item mr={30} >
