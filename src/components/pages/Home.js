@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import SendIcon from '@mui/icons-material/Send';
 
 import { useAuth0 } from "@auth0/auth0-react";
+import '../Main.css'
+
+
 
 
 const Home = () => {
@@ -17,17 +20,17 @@ const Home = () => {
         <Typography ml='50px' mt='70px'> { isAuthenticated && <Typography variant='h4' sx={{ fontFamily: 'Pacifico' }}> Welcome <span style={{fontWeight: 'bolder'}}> {user.name} </span> </Typography> }
         </Typography>
 
-        <Typography color='#4E4BDC' mt='100px' ml={10} mb={3} sx={{ fontFamily: 'Oswald', textDecoration: 'underline', textDecorationColor: 'black', fontSize: { lg:'85px', xs: '50px'} }}>
-            What is AIMETRIC
+        <Typography className='what' color='#4E4BDC' mt='100px' ml={6} mb={3} sx={{ fontFamily: 'Edu NSW ACT Foundation cursive' , textDecorationColor: 'black', fontSize: { lg:'85px', xs: '50px'} }}>
+            What is Aimetric?
         </Typography>
         <Typography variant='h5' ml={3}>
-       <Typography sx={{fontWeight: 'bolder', fontSize: { lg: '45px', xs: '40px'}, fontFamily: 'Climate Crisis'}}> Dear Students: </Typography> <br />
-         <Typography sx={{ fontSize: { lg: '30px', xs: '20px'}, fontFamily: 'Merienda' }}> We are delighted to intoduce you to AIMETRIC ,where we lessen your energy consumption to arrange your time. Whether you are beginning or continuing your hustle journey with us, we look forward to learning, exploring, and growing together .You can trust us, you will find unlimited opportunities for growth here at AIMETRIC. As a platform dedicated to servicing the next generation of contributors and leaders, we are excited to invest in your future, and to partner with you as you pursue your dreams. </Typography>
+       <Typography className='dear' sx={{fontWeight: 'bolder', fontSize: { lg: '45px', xs: '40px'}, fontFamily: 'Climate Crisis'}}> Dear Students: </Typography> <br />
+         <Typography className='para' sx={{ fontSize: { lg: '30px', xs: '20px'}, fontFamily: 'Merienda' }}> We are delighted to intoduce you to AIMETRIC ,where we lessen your energy consumption to arrange your time. Whether you are beginning or continuing your hustle journey with us, we look forward to learning, exploring, and growing together .You can trust us, you will find unlimited opportunities for growth here at AIMETRIC. As a platform dedicated to servicing the next generation of contributors and leaders, we are excited to invest in your future, and to partner with you as you pursue your dreams. </Typography>
         </Typography>
 
         <Button
         component={Link} to='https://www.figma.com/proto/vz5r1cCJcqsS3X0RkYKkoM/AIMETRIC?node-id=117%3A2614&scaling=scale-down&page-id=0%3A1&starting-point-node-id=77%3A1428&show-proto-sidebar=1' target="_blank"
-          sx={{ mt: '20px', fontFamily: 'Oswald', background: 'linear-gradient(#4E4BDC, #7367EE)', padding: '1%', left: '2%', color: 'white', cursor: 'pointer', fontSize: '18px', ":hover": { background: '#4542e2' } }} >
+          sx={{ mt: '20px', fontFamily: 'Oswald', background: 'linear-gradient(#4E4BDC, #7367EE)', padding: '1%', left: '2%', color: 'white', cursor: 'pointer', fontSize: '18px',ml:'20px', ":hover": { background: '#4542e2' } }} >
           How it works
         </Button>
 
@@ -80,7 +83,7 @@ const Home = () => {
         </Typography>
         </Grid>
         <Divider orientation='vertical' flexitem />
-        <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 138 , maxWidth: 206, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : '#4E4BDC', mt: '110px', ml: '30px' }} >
+        <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 138 , maxWidth: 206, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : '#4E4BDC', mt: '110px', ml: '30px', ":hover" : { backgroundColor:'#7367EE' } }} >
             <Grid item xs>
               <Button variant='text' component={Link} to='/budget' color='secondary' sx={{ fontSize: '25px', fontWeight: 'bolder', color: 'white', textAlign: 'center', p: '0 0 3px 0' }}>
                 Budget Tracker

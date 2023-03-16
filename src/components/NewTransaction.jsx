@@ -35,7 +35,7 @@ const NewTransaction=({setTransactions})=>{
     return(
         <Container>
             <Typography variant='h5'>New Transaction</Typography>
-            <TextField label='Date' onChange={(e)=> setText(e.target.value)}/>
+            <TextField type="date" onChange={(e)=> setText(e.target.value)}/>
             <TextField label='Enter amount'onChange={(e)=> setAmount(e.target.value)}/>
             <Button variant='contained' onClick={()=>addTransaction()}>Add Transaction</Button>
         </Container>

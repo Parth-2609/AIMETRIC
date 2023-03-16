@@ -18,7 +18,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Logo from '../assets/AIMETRIC.jpeg';
 
 // const pages = ['Home', 'About'];
-const settings = ['Profile', 'Dashboard'];
+// const settings = ['Profile', 'Dashboard'];
 
 
 function ResponsiveAppBar() {
@@ -42,7 +42,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'blueviolet', height: '66px' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#7367EE', height: '66px' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'flex', lg: 'flex' }, mr: 1 }} />
