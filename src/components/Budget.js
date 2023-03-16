@@ -5,9 +5,10 @@ import ExpenseCard from "./ExpenseCard";
 import NewTransaction from "./NewTransaction";
 import Transaction from "./Transactions";
 import { useState } from "react";
+import './Main.css';
 
 const Header=styled(Typography)`
-margin= 2px 0;
+margin: 2px 0;
 font-size:36px;
 color:#4E4BDC;
 font-weight:bold;
@@ -22,7 +23,7 @@ margin:auto;
 justify-content:center
 background #fff;
 & > div{
-    height:70vh;
+    height:75vh;
     width:50%;
     padding:10px;
 }`

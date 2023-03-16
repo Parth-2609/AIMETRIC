@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import TodoList from './TodoList';
+import './Main.css';
 
 const AddTask =() => {
   const [inputList,setInputList]= useState("");
@@ -25,10 +26,10 @@ const AddTask =() => {
   <div className='main_div'>
     <div className='center_div'>
       <br/>
-      <h1>Add Task</h1>
+      <h1 className='task'>Add Task</h1>
       <br/>
-      <input type="text" placeholder='Add an item' value={inputList} onChange={itemEvent}/>
-      <button on onClick={ListOfItems}> + </button>
+      <input className='inp' type="text" placeholder='Add an item' value={inputList} onChange={itemEvent}/>
+      <button className='plus' on onClick={ListOfItems}> + </button>
 
 
       <ol>

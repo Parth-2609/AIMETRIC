@@ -9,6 +9,8 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Calender from './components/pages/Calender';
 import Profile from './components/pages/Profile';
+import AddTask from './components/AddTask';
+import Budget from './components/Budget';
 
 
 
@@ -21,6 +23,8 @@ const App = () => {
         <Route exact path="/about" element={<About />} />
         <Route exact path="/calender" element={<Calender />} />
         <Route exact path="/profile" element={<Profile />} />
+        <Route exact path="/addtask" element={<AddTask />} />
+        <Route exact path="/budget" element={<Budget />} />
       </Routes>
       <Footer />
     </>

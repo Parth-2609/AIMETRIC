@@ -42,7 +42,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'blueviolet' }}>
+    <AppBar position="static" sx={{ backgroundColor: 'blueviolet', height: '66px' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'flex', lg: 'flex' }, mr: 1 }} />
@@ -181,9 +181,9 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-            <Stack direction="column">
-            <Button component={Link} to='/profile' >Profile</Button>
-            <Button >Dashboard</Button>
+            <Stack direction="column" spacing={1}>
+            <Button component={Link} to='/profile' variant='outlined' color='secondary' >Profile</Button>
+            <Button variant='outlined' color='secondary' >Dashboard</Button>
               {/* {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>

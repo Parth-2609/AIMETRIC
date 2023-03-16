@@ -17,12 +17,12 @@ const Home = () => {
         <Typography ml='50px' mt='70px'> { isAuthenticated && <Typography variant='h4' sx={{ fontFamily: 'Pacifico' }}> Welcome <span style={{fontWeight: 'bolder'}}> {user.name} </span> </Typography> }
         </Typography>
 
-        <Typography color='#4E4BDC' variant='h1' mt='100px' ml={10} mb={3} sx={{ fontFamily: 'Oswald', textDecoration: 'underline', textDecorationColor: 'black' }}>
+        <Typography color='#4E4BDC' mt='100px' ml={10} mb={3} sx={{ fontFamily: 'Oswald', textDecoration: 'underline', textDecorationColor: 'black', fontSize: { lg:'85px', xs: '50px'} }}>
             What is AIMETRIC
         </Typography>
         <Typography variant='h5' ml={3}>
-       <span style={{fontWeight: 'bolder', fontSize: '45px', fontFamily: 'Climate Crisis'}}> Dear Students: </span> <br />
-         <span style={{ fontSize: '30px', fontFamily: 'Merienda' }}> We are delighted to intoduce you to AIMETRIC ,where we lessen your energy consumption to arrange your time. Whether you are beginning or continuing your hustle journey with us, we look forward to learning, exploring, and growing together .You can trust us, you will find unlimited opportunities for growth here at AIMETRIC. As a platform dedicated to servicing the next generation of contributors and leaders, we are excited to invest in your future, and to partner with you as you pursue your dreams. </span>
+       <Typography sx={{fontWeight: 'bolder', fontSize: { lg: '45px', xs: '40px'}, fontFamily: 'Climate Crisis'}}> Dear Students: </Typography> <br />
+         <Typography sx={{ fontSize: { lg: '30px', xs: '20px'}, fontFamily: 'Merienda' }}> We are delighted to intoduce you to AIMETRIC ,where we lessen your energy consumption to arrange your time. Whether you are beginning or continuing your hustle journey with us, we look forward to learning, exploring, and growing together .You can trust us, you will find unlimited opportunities for growth here at AIMETRIC. As a platform dedicated to servicing the next generation of contributors and leaders, we are excited to invest in your future, and to partner with you as you pursue your dreams. </Typography>
         </Typography>
 
         <Button
@@ -32,20 +32,20 @@ const Home = () => {
         </Button>
 
 
-        <Typography color='#4E4BDC' variant='h1' mt={10} ml={10}>
-          <span style={{ textDecoration: 'underline', textDecorationColor: 'black', fontFamily: 'Oswald' }}> What we OFFER </span> <br />
+        <Typography color='#4E4BDC' mt={10} ml={10}>
+          <Typography sx={{ textDecoration: 'underline', textDecorationColor: 'black', fontFamily: 'Oswald', fontSize: {lg: '85px', xs: '50px'} }}> What we OFFER </Typography> <br />
         </Typography>
       <Grid container >
         <Grid item xs>
-        <Typography mt={5} variant='h2' ml={5} >
+        <Typography variant='h2' ml={5} >
           <SendIcon sx={{ width: '38px', height: '38px' }} />
           <span style={{ fontSize: '55px', color: '#7367EE', fontFamily: 'fantasy' }}> SHORT TERM GOAL</span> : <span style={{ fontSize: '55px', fontFamily: 'serif' }}> Tracking day to day activities to meet the deadlines on time. </span>
         </Typography>
         </Grid>
         <Divider orientation='vertical' flexitem />
-        <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 50 , maxWidth: 150, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : '#4E4BDC', mt: '60px', ml: '30px' }} >
+        <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 110 , maxWidth: 180, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : '#4E4BDC', mt: '20px', ml: '30px' }} >
             <Grid item xs>
-              <Button variant='text' color='secondary' sx={{ fontSize: '25px', fontWeight: 'bolder', color: 'white' }}>
+              <Button variant='text' component={Link} to='/addtask' color='secondary' sx={{ fontSize: '25px', fontWeight: 'bolder', color: 'white' }}>
                 Tasks
               </Button>
             </Grid>
@@ -61,7 +61,7 @@ const Home = () => {
         </Typography>
         </Grid>
         <Divider orientation='vertical' flexitem />
-        <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 50 , maxWidth: 150, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : '#4E4BDC', mt: '70px', ml: '30px' }} >
+        <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 110 , maxWidth: 220, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : '#4E4BDC', mt: '70px', ml: '30px' }} >
             <Grid item xs>
               <Button variant='text' component={Link} to='/calender' sx={{ fontWeight: 'bolder', fontSize: '25px', color: 'white',  }}>
                 Calender
@@ -80,43 +80,15 @@ const Home = () => {
         </Typography>
         </Grid>
         <Divider orientation='vertical' flexitem />
-        <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 90 , maxWidth: 200, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : '#4E4BDC', mt: '120px', ml: '30px' }} >
+        <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 138 , maxWidth: 206, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : '#4E4BDC', mt: '110px', ml: '30px' }} >
             <Grid item xs>
-              <Button variant='text' color='secondary' sx={{ fontSize: '25px', fontWeight: 'bolder', color: 'white' }}>
+              <Button variant='text' component={Link} to='/budget' color='secondary' sx={{ fontSize: '25px', fontWeight: 'bolder', color: 'white', textAlign: 'center', p: '0 0 3px 0' }}>
                 Budget Tracker
               </Button>
             </Grid>
           </Paper>
 
       </Grid>
-        
-        {/* <Grid container spacing={1} >
-
-          <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 50 , maxWidth: 150, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : 'aquamarine', mt: '120px', ml: '200px' }} >
-            <Grid item xs>
-              <Button variant='text' component={Link} to='/calender' sx={{ fontWeight: 'bolder', fontSize: '25px', color: 'blueviolet',  }}>
-                Calender
-              </Button>
-            </Grid>
-          </Paper>
-
-          <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 50 , maxWidth: 150, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : 'aquamarine', mt: '120px', ml: '150px' }} >
-            <Grid item xs>
-              <Button variant='text' color='secondary' sx={{ fontSize: '25px', fontWeight: 'bolder', color: 'blueviolet' }}>
-                Tasks
-              </Button>
-            </Grid>
-          </Paper>
-
-          <Paper variant='outlined' square sx={{ p: 4, margin: '70px', height: 90 , maxWidth: 200, backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#1A2027' : 'aquamarine', mt: '120px', ml: '150px' }} >
-            <Grid item xs>
-              <Button variant='text' color='secondary' sx={{ fontSize: '25px', fontWeight: 'bolder', color: 'blueviolet' }}>
-                Budget Tracker
-              </Button>
-            </Grid>
-          </Paper>
-
-        </Grid> */}
 
     </Box>
   )
